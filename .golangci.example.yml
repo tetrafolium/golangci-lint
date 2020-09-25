@@ -72,6 +72,9 @@ output:
   # make issues output unique by line, default is true
   uniq-by-line: true
 
+  # add a prefix to the output file references; default is no prefix
+  path-prefix: ""
+
 
 # all available settings of specific linters
 linters-settings:
@@ -106,6 +109,11 @@ linters-settings:
   funlen:
     lines: 60
     statements: 40
+  gci:
+    # put imports beginning with prefix after 3rd-party packages;
+    # only support one prefix
+    # if not set, use goimports.local-prefixes
+    local-prefixes: github.com/org/project
   gocognit:
     # minimal code complexity to report, 30 by default (but we recommend 10-20)
     min-complexity: 10
@@ -157,6 +165,33 @@ linters-settings:
   gofmt:
     # simplify code: gofmt with `-s` option, true by default
     simplify: true
+  goheader:
+    values:
+      const:
+        # define here const type values in format k:v, for example:
+        # YEAR: 2020
+        # COMPANY: MY COMPANY
+      regexp:
+        # define here regexp type values, for example
+        # AUTHOR: .*@mycompany\.com
+    template:
+      # put here copyright header template for source code files, for example:
+      #    {{ AUTHOR }} {{ COMPANY }} {{ YEAR }}
+      #    SPDX-License-Identifier: Apache-2.0
+      #
+      #    Licensed under the Apache License, Version 2.0 (the "License");
+      #    you may not use this file except in compliance with the License.
+      #    You may obtain a copy of the License at:
+      #
+      #      http://www.apache.org/licenses/LICENSE-2.0
+      #
+      #    Unless required by applicable law or agreed to in writing, software
+      #    distributed under the License is distributed on an "AS IS" BASIS,
+      #    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      #    See the License for the specific language governing permissions and
+      #    limitations under the License.
+    template-path:
+      # also as alternative of directive 'template' you may put the path to file with the template source
   goimports:
     # put imports beginning with prefix after 3rd-party packages;
     # it's a comma-separated list of prefixes
@@ -292,6 +327,10 @@ linters-settings:
     force-err-cuddling: false
     # Allow leading comments to be separated with empty liens
     allow-separated-leading-comment: false
+  gofumpt:
+    # Choose whether or not to use the extra rules that are disabled
+    # by default
+    extra-rules: false
 
   # The custom section can be used to define linter plugins to be loaded at runtime. See README doc
   #  for more info.

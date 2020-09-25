@@ -197,11 +197,20 @@ func (m Manager) GetAllSupportedLinterConfigs() []*linter.Config {
 			WithURL("https://golang.org/cmd/gofmt/"),
 		linter.NewConfig(golinters.NewGofumpt()).
 			WithPresets(linter.PresetFormatting).
+			WithAutoFix().
 			WithURL("https://github.com/mvdan/gofumpt"),
 		linter.NewConfig(golinters.NewGoimports()).
 			WithPresets(linter.PresetFormatting).
 			WithAutoFix().
 			WithURL("https://godoc.org/golang.org/x/tools/cmd/goimports"),
+		linter.NewConfig(golinters.NewGoHeader()).
+			WithPresets(linter.PresetStyle).
+			WithLoadForGoAnalysis().
+			WithURL("https://github.com/denis-tingajkin/go-header"),
+		linter.NewConfig(golinters.NewGci()).
+			WithLoadForGoAnalysis().
+			WithAutoFix().
+			WithURL("https://github.com/daixiang0/gci"),
 		linter.NewConfig(golinters.NewMaligned()).
 			WithLoadForGoAnalysis().
 			WithPresets(linter.PresetPerformance).
@@ -288,6 +297,14 @@ func (m Manager) GetAllSupportedLinterConfigs() []*linter.Config {
 			WithPresets(linter.PresetBugs).
 			WithLoadForGoAnalysis().
 			WithURL("https://github.com/nishanths/exhaustive"),
+		linter.NewConfig(golinters.NewSQLCloseCheck()).
+			WithPresets(linter.PresetBugs).
+			WithLoadForGoAnalysis().
+			WithURL("https://github.com/ryanrolds/sqlclosecheck"),
+		linter.NewConfig(golinters.NewNLReturn()).
+			WithPresets(linter.PresetStyle).
+			WithLoadForGoAnalysis().
+			WithURL("https://github.com/ssgreg/nlreturn"),
 		// nolintlint must be last because it looks at the results of all the previous linters for unused nolint directives
 		linter.NewConfig(golinters.NewNoLintLint()).
 			WithPresets(linter.PresetStyle).
