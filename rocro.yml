@@ -6,7 +6,7 @@ inspecode:
 
     - name: dockerfilelint
       type: docker-build
-      dockerfile: "rocro-dockerfilelint.Dockerfile"
+      dockerfile: "inspecode-dockerfilelint.Dockerfile"
       options:
         --build-arg:
           OUTDIR=/.reports
@@ -22,7 +22,7 @@ inspecode:
 
     - name: hadolint
       type: docker-build
-      dockerfile: "rocro-hadolint.Dockerfile"
+      dockerfile: "inspecode-hadolint.Dockerfile"
       options:
         --build-arg:
           OUTDIR=/.reports
@@ -36,9 +36,26 @@ inspecode:
           path: "/.reports/hadolint.sarif"
       thresholds: {num-issues: 11}
 
-    - name: yamllint
+    - name: yamllint_Example
       type: docker-build
-      dockerfile: "rocro-yamllint.Dockerfile"
+      dockerfile: "inspecode-yamllint.Dockerfile"
+      options:
+        --build-arg:
+          OUTDIR=/.reports
+      artifacts:
+        - from: yamllint-task
+          path: "/.reports/yamllint.issues"
+      reports:
+        - from: yamllint-task
+          path: "/.reports/yamllint.issues"
+          format:
+            type: example
+            path: inspecode-examples/yamllint.issues.example
+      thresholds: {num-issues: 161}
+
+    - name: yamllint_SARIF
+      type: docker-build
+      dockerfile: "inspecode-yamllint.Dockerfile"
       options:
         --build-arg:
           OUTDIR=/.reports
@@ -50,6 +67,8 @@ inspecode:
       reports:
         - from: yamllint-task
           path: "/.reports/yamllint.sarif"
+          format:
+            type: SARIF
       thresholds: {num-issues: 161}
 
   tools:
