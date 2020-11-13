@@ -28,5 +28,5 @@ inspecode:
     #   thresholds: {num-issues: 45}
 
     ##### [go mod tidy]
-    # staticcheck:
-    #   thresholds: {num-issues: 3}
+    staticcheck:
+      thresholds: {num-issues: 3}
