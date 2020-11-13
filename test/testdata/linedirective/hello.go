@@ -2,9 +2,7 @@
 //line hello.tmpl:1
 package main
 
-import (
-	"github.com/ryancurrah/gomodguard"
-)
+import "fmt"
 
 func _() {
 	var x int
@@ -31,7 +29,7 @@ func wsl() bool {
 	return true
 }
 
-func notFormatted()  {
+func notFormatted() {
 }
 
 // langauge
