@@ -1,9 +1,10 @@
-{{file:./.swiftlint.yml}}:{{startLine:1}}:{{startColumn:1}}: [{{level:warning}}] {{message:missing document start "---" (document-start)}}
-{{file:./.swiftlint.yml}}:{{startLine:84}}:{{startColumn:5}}: [{{level:error}}] {{message:wrong indentation: expected 2 but found 4 (indentation)}}
-{{file:./.swiftlint.yml}}:{{startLine:151}}:{{startColumn:81}}: [{{level:error}}] {{message:line too long (98 > 80 characters) (line-length)}}
-{{file:./.github/workflows/Test.yml}}:{{startLine:3}}:{{startColumn:1}}: [{{level:warning}}] {{message:truthy value should be one of [false, true] (truthy)}}
-{{file:./CotEditor/Syntaxes/C++.yaml}}:{{startLine:127}}:{{startColumn:1}}: [{{level:error}}] {{message:duplication of key "attributes" in mapping (key-duplicates)}}
-{{file:./rocro.yaml}}:{{startLine:61}}:{{startColumn:5}}: [{{level:warning}}] {{message:comment not indented like content (comments-indentation)}}
+{{file:./.goreleaser.yml}}:{{startLine:59}}:{{startColumn:5}}: [{{level:error}}] {{message:wrong indentation: expected 6 but found 4 (indentation)}}
+{{file:./.golangci.yml}}:{{startLine:144}}:{{startColumn:81}}: [{{level:error}}] {{message:line too long (97 > 80 characters) (line-length)}}
+{{file:./.github/workflows/tag.yml}}:{{startLine:3}}:{{startColumn:1}}: [{{level:warning}}] {{message:truthy value should be one of [false|true] (truthy)}}
+{{file:./.github/workflows/codeql.yaml}}:{{startLine:10}}:{{startColumn:16}}: [{{level:error}}] {{message:too many spaces inside brackets (brackets)}}
+{{file:./.golangci.yml}}:{{startLine:109}}:{{startColumn:3}}: [{{level:warning}}] {{message:comment not indented like content (comments-indentation)}}
+{{file:./.markdownlint.yaml}}:{{startLine:1}}:{{startColumn:1}}: [{{level:warning}}] {{message:missing document start "---" (document-start)}}
+{{file:./.markdownlint.yaml}}:{{startLine:2}}:{{startColumn:13}}: [{{level:error}}] {{message:no new line character at the end of file (new-line-at-end-of-file)}}
 
 {{baseDir=/home/rocro}}
 {{lineOriginZero=false}}
