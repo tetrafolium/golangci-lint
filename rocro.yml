@@ -15,8 +15,8 @@ inspecode:
     #   thresholds: {num-issues: 1}
 
     ##### [go mod tidy]
-    # go-vet:
-    #   thresholds: {num-issues: 0}
+    go-vet:
+      thresholds: {num-issues: 0}
 
     ##### [go mod tidy]
     # goimports:
