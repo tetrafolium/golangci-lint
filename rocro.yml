@@ -80,8 +80,9 @@ inspecode:
     cpd:
       thresholds: {num-issues: 15}
 
-    errcheck:
-      thresholds: {num-issues: 63}
+    ##### [go mod tidy]
+    # errcheck:
+    #   thresholds: {num-issues: 63}
 
     # fortify:
     #  thresholds: {num-issues: 999}
@@ -89,24 +90,28 @@ inspecode:
     fossology:
       thresholds: {num-issues: 16}
 
-    go-test:
-      thresholds: {num-issues: 1}
+    ##### [go mod tidy]
+    # go-test:
+    #   thresholds: {num-issues: 1}
 
-    go-vet:
-      thresholds: {num-issues: 0}
+    ##### [go mod tidy]
+    # go-vet:
+    #   thresholds: {num-issues: 0}
 
     gofmt:
       auto-fix: true
       thresholds: {num-issues: 11}
 
-    goimports:
-      auto-fix: true
-      thresholds: {num-issues: 12}
+    ##### [go mod tidy]
+    # goimports:
+    #   auto-fix: true
+    #   thresholds: {num-issues: 12}
 
     golint:
       auto-fix: true
       thresholds: {num-issues: 695}
 
+    ##### [go mod tidy]
     # gosec:
     #   thresholds: {num-issues: 45}
 
@@ -130,8 +135,9 @@ inspecode:
     shellcheck:
       thresholds: {num-issues: 0}
 
-    staticcheck:
-      thresholds: {num-issues: 3}
+    ##### [go mod tidy]
+    # staticcheck:
+    #   thresholds: {num-issues: 3}
 
     tslint:
       auto-fix: true
