@@ -19,9 +19,9 @@ inspecode:
     #   thresholds: {num-issues: 0}
 
     ##### [go mod tidy]
-    # goimports:
-    #   auto-fix: true
-    #   thresholds: {num-issues: 12}
+    goimports:
+      auto-fix: true
+      thresholds: {num-issues: 12}
 
     ##### [go mod tidy]
     # gosec:
