@@ -1,6 +1,8 @@
 inspecode:
 
   global:
+    runtime:
+      go: 1.13
 
   tasks:
 
@@ -84,7 +86,11 @@ inspecode:
     #   thresholds: {num-issues: 63}
 
     fortify:
-     thresholds: {num-issues: 999}
+      options:
+        --build-cmds:
+          - make GO="sourceanalyzer -b build_id go" build
+        --work-dir: /
+      thresholds: {num-issues: 999}
 
     # fossology:
     #   thresholds: {num-issues: 16}
