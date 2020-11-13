@@ -95,17 +95,17 @@ inspecode:
     # go-vet:
     #   thresholds: {num-issues: 0}
 
-    # gofmt:
-    #   auto-fix: true
-    #   thresholds: {num-issues: 11}
+    gofmt:
+      auto-fix: true
+      thresholds: {num-issues: 11}
 
-    # goimports:
-    #   auto-fix: true
-    #   thresholds: {num-issues: 12}
+    goimports:
+      auto-fix: true
+      thresholds: {num-issues: 12}
 
-    # golint:
-    #   auto-fix: true
-    #   thresholds: {num-issues: 695}
+    golint:
+      auto-fix: true
+      thresholds: {num-issues: 695}
 
     # gosec:
     #   thresholds: {num-issues: 45}
