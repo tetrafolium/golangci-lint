@@ -87,6 +87,7 @@ inspecode:
     # fortify:
     #  thresholds: {num-issues: 999}
 
+    ##### Failed ... handling by codelift#2122
     fossology:
       thresholds: {num-issues: 16}
 
@@ -131,7 +132,6 @@ inspecode:
     shellcheck:
       thresholds: {num-issues: 0}
 
-    ##### [go mod tidy] ... codelift#2085
     staticcheck:
       thresholds: {num-issues: 3}
 
