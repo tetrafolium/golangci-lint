@@ -1,11 +1,9 @@
 Follow the news and releases on our [twitter](https://twitter.com/golangci) and our [blog](https://medium.com/golangci).
 There is the most valuable changes log:
 
-
 ### Septempber 2020
 
 1. update exhaustive linter (#1339)
-
 
 ### August 2020
 
@@ -23,27 +21,26 @@ There is the most valuable changes log:
 12. add home directory to config file search paths (#1325)
 13. allow for serializing multiple golangci-lint invocations (#1302)
 
-
 ### July 2020
 
 1. `gofumpt` linter:
-    * update linter
-    * add `extra-rules` option
-    * support auto-fixing
+   - update linter
+   - add `extra-rules` option
+   - support auto-fixing
 2. upgrade `exhaustive` linter
 3. upgrade `exportloopref` linter
 4. improve 'no such linter' error message
 5. sorting result.Issues implementation
 6. enhancements in CI:
-    * Run `nancy` validation for all dependencies
-    * Move dependabot config to `.github` folder
+   - Run `nancy` validation for all dependencies
+   - Move dependabot config to `.github` folder
 7. other
-    * bump `lodash` from 4.17.15 to 4.17.19 in /tools
-    * bump `golangci/golangci-lint-action` from v1.2.2 to v2
-    * bump `github.com/valyala/quicktemplate` from 1.5.0 to 1.5.1
-
+   - bump `lodash` from 4.17.15 to 4.17.19 in /tools
+   - bump `golangci/golangci-lint-action` from v1.2.2 to v2
+   - bump `github.com/valyala/quicktemplate` from 1.5.0 to 1.5.1
 
 ### June 2020
+
 1. Add new linters: `gofumpt`
 
 ### May 2020
