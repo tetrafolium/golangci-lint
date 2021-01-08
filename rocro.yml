@@ -79,10 +79,12 @@ inspecode:
       thresholds: {num-issues: 5}
 
     cpd:
-      thresholds: {num-issues: 15}
+      ignore: ["**/testdata/", "**/*_test.go"]
+      thresholds: {num-issues: 3}
 
     errcheck:
-      thresholds: {num-issues: 64}
+      ignore: ["**/testdata/", "**/*_test.go"]
+      thresholds: {num-issues: 42}
 
     # fortify:
     #  thresholds: {num-issues: 999}
@@ -105,8 +107,9 @@ inspecode:
       thresholds: {num-issues: 12}
 
     golint:
+      ignore: ["**/testdata/", "**/*_test.go"]
       auto-fix: true
-      thresholds: {num-issues: 695}
+      thresholds: {num-issues: 470}
 
     gosec:
       thresholds: {num-issues: 46}
@@ -118,7 +121,8 @@ inspecode:
       thresholds: {num-issues: 0}
 
     jscpd:
-      thresholds: {num-issues: 75}
+      ignore: ["**/testdata/", "**/*_test.go"]
+      thresholds: {num-issues: 47}
 
     misspell:
       auto-fix: true
@@ -139,5 +143,6 @@ inspecode:
       thresholds: {num-issues: 0}
 
     unused:
+      ignore: ["**/testdata/", "**/*_test.go"]
       options: [--single-occurrence, --all-likelihoods]
-      thresholds: {num-issues: 251}
+      thresholds: {num-issues: 4}
