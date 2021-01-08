@@ -35,7 +35,7 @@ inspecode:
       reports:
         - from: hadolint-task
           path: "/.reports/hadolint.sarif"
-      thresholds: {num-issues: 11}
+      thresholds: {num-issues: 9}
 
     - name: yamllint_Example
       type: docker-build
@@ -87,7 +87,6 @@ inspecode:
     # fortify:
     #  thresholds: {num-issues: 999}
 
-    ##### Failed ... handling by codelift#2122
     fossology:
       thresholds: {num-issues: 16}
 
